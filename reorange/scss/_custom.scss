@@ -1,0 +1,90 @@
+/*=============================================================
+"ReTheme" for Bootstrap 4
+----------------------------------
+Author: Cristian Sarca
+GitHub: cristiansarca.github.io
+=============================================================*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat'); //navbar-brand's font-family.
+@import url('https://fonts.googleapis.com/css?family=Arimo');
+
+//NAVBAR
+.navbar-dark,
+.navbar-light,
+.navbar-primary {
+    .navbar-nav .nav-link {
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+.navbar-primary {
+    .navbar-toggler {
+        color: $navbar-dark-color;
+        border-color: $navbar-dark-toggler-border-color;
+    }
+
+    .navbar-toggler-icon {
+        background-image: $navbar-dark-toggler-icon-bg;
+      }
+}
+
+.navbar-primary.bg-light {
+    .navbar-toggler {
+        color: $navbar-light-color;
+        border-color: $navbar-light-toggler-border-color;
+    }
+
+    .navbar-toggler-icon {
+        background-image: $navbar-light-toggler-icon-bg;
+      }
+}
+
+.navbar-brand {
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+//BUTTONS
+
+.btn-primary,
+.btn-secondary,
+.btn-dark,
+.btn-info,
+.btn-success,
+.btn-warning,
+.btn-danger {
+    color: $white;
+}
+
+
+// Alerts
+@each $color, $value in $theme-colors {
+    .alert-#{$color} {
+      @include alert-variant(theme-color-level($color, 0), theme-color-level($color, 0), theme-color-level($color, -10));
+    }
+  }
+
+//Badge
+.badge-primary,
+.badge-secondary,
+.badge-dark,
+.badge-info,
+.badge-success,
+.badge-warning,
+.badge-danger {
+    color: $white;
+}
+
+// Tables
+@each $color, $value in $theme-colors {
+    @include table-row-variant($color, theme-color-level($color, 0));
+  }
+  
+  @include table-row-variant(active, $table-active-bg);
+
+//Cards
+//the shadow doesn't really look good with cards that don't have a white background or if they have a border.
+.card {
+    box-shadow:0px 3px 3px 0px rgba($black, .3);
+}
