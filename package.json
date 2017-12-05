@@ -1,0 +1,31 @@
+{
+  "name": "themes",
+  "version": "1.0.0",
+  "description": "Themes for bootstrap 4.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CristianSarca/bs4themes.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "themes"
+  ],
+  "author": "Cristian Sarca",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CristianSarca/bs4themes/issues"
+  },
+  "homepage": "https://github.com/CristianSarca/bs4themes#readme",
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.0.0-beta",
+    "jquery": "^1.9.1",
+    "popper.js": "^1.12.3"
+  }
+}
