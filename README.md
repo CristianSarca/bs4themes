@@ -1,2 +1,2 @@
-# bs4themes
+# Theme Solution
 Themes for Bootstrap 4
