@@ -221,8 +221,8 @@ $popover-arrow-outer-color:         fade-in($popover-border-color, .05) !default
 
 //Modal
 
-$modal-content-bg:               $dark !default;
+$modal-content-bg:               $light !default;
 $modal-content-border-width:     0 !default;
 
 //Code
-$pre-color:                         $gray-300 !default;
+$pre-color:                         $secondary !default; 

@@ -550,7 +550,7 @@ kbd kbd {
 pre {
   display: block;
   font-size: 87.5%;
-  color: #dee2e6;
+  color: #424658;
 }
 
 pre code {
@@ -5515,7 +5515,7 @@ button.close {
           flex-direction: column;
   width: 100%;
   pointer-events: auto;
-  background-color: #2b2e3a;
+  background-color: #f8f9fa;
   background-clip: padding-box;
   border: 0 solid rgba(0, 0, 0, 0.2);
   border-radius: 3rem;
