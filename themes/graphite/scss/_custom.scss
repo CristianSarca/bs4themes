@@ -1,0 +1,103 @@
+/*=============================================================
+"Theme Solution" for Bootstrap 4
+----------------------------------
+Author: Cristian Sarca
+GitHub: cristiansarca.github.io
+=============================================================*/
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,700');
+
+//NAVBAR
+
+.navbar {
+    .form-control {
+        background: $gray-200;
+    }
+}
+// .navbar-dark,
+// .navbar-light,
+// .navbar-primary {
+//     .navbar-nav .nav-link {
+//         // text-transform: uppercase; 
+//     }
+// }
+
+.navbar-primary {
+    .navbar-toggler {
+        color: $navbar-dark-color;
+        border-color: $navbar-dark-toggler-border-color;
+    }
+
+    .navbar-toggler-icon {
+        background-image: $navbar-dark-toggler-icon-bg;
+      }
+}
+
+.navbar-primary.bg-light {
+    .navbar-toggler {
+        color: $navbar-light-color;
+        border-color: $navbar-light-toggler-border-color;
+    }
+
+    .navbar-toggler-icon {
+        background-image: $navbar-light-toggler-icon-bg;
+      }
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+
+
+//BUTTONS
+@each $color, $value in $theme-colors {
+    .btn-#{$color} {
+        @include button-variant ($value, $value, lighten($value, 7.5%), lighten($value, 10%), lighten($value, 10%), lighten($value, 12.5%));
+        color: $light;
+  }
+}
+
+// Alerts
+@each $color, $value in $theme-colors {
+    .alert-#{$color} {
+      @include alert-variant(theme-color-level($color, -10), theme-color-level($color, -10), theme-color-level($color, 5));
+    }
+  }
+
+
+// Tables
+@each $color, $value in $theme-colors {
+    @include table-row-variant($color, theme-color-level($color, -5));
+  }
+  
+  @include table-row-variant(active, $table-active-bg);
+
+//Forms
+
+
+.form-control-plaintext {
+    color: $light;
+}
+
+//Jumbotron
+.jumbotron {
+    border-radius: 0;
+}
+
+.modal-content {
+    border-radius: 0;
+}
+
+
+
+@each $color, $value in $theme-colors {
+    .badge-#{$color} {
+        color: $value;
+        background: transparent;
+        border: 1px solid $value;
+    }
+}
+
+
+  
