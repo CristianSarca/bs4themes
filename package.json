@@ -20,9 +20,7 @@
     "url": "https://github.com/CristianSarca/bs4themes/issues"
   },
   "homepage": "https://github.com/CristianSarca/bs4themes#readme",
-  "dependencies": {
-    "font-awesome": "^4.7.0"
-  },
+ 
   "devDependencies": {
     "bootstrap": "^4.0.0",
     "jquery": "~3.0.0",

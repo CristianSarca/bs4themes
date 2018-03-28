@@ -908,31 +908,34 @@
         </div>
         <fieldset class="form-group">
           <legend>Radio buttons</legend>
-          <div class="form-check">
-            <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-              Option one is this and that—be sure to include why it's great
-            </label>
+
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+            <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
           </div>
-          <div class="form-check">
-          <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-              Option two can be something else and selecting it will deselect option one
-            </label>
+
+          <div class="custom-control custom-radio">
+            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+            <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
           </div>
-          <div class="form-check disabled">
-          <label class="form-check-label">
-              <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled="">
-              Option three is disabled
-            </label>
+
+          <div class="custom-control custom-radio disabled">
+            <input type="radio" id="customRadioD" name="customRadio" class="custom-control-input">
+            <label class="custom-control-label" for="customRadio1">Disabled custom radio</label>
           </div>
         </fieldset>
         <fieldset class="form-group">
           <legend>Checkboxes</legend>
+
+          <div class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input" id="customCheck1">
+            <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+          </div>
+
           <div class="form-check">
             <label class="form-check-label">
               <input class="form-check-input" type="checkbox" value="" checked="">
-              Option one is this and that—be sure to include why it's great
+              Default checkbox
             </label>
           </div>
           <div class="form-check disabled">

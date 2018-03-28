@@ -11,9 +11,9 @@ GitHub: cristiansarca.github.io
 //NAVBAR
 
 .navbar {
-    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3);
+    box-shadow: 0 .1rem .2rem rgba($black, .175);
     .form-control {
-        background: $gray-200; 
+        background: $gray-200;
     }
 }
 .navbar-dark,
@@ -47,33 +47,61 @@ GitHub: cristiansarca.github.io
 }
 
 .navbar-brand {
-    font-family: Poppins;
     font-weight: bold;
 }
+
+
 
 //BUTTONS
 @each $color, $value in $theme-colors {
     .btn-#{$color} {
         @include button-variant ($value, $value, lighten($value, 7.5%), lighten($value, 10%), lighten($value, 10%), lighten($value, 12.5%));
-        color: lighten($value, 45%);
+        color: $light;
   }
+}
+
+.btn-info {
+    color: $secondary;
+}
+
+// .btn-secondary {
+//     background: lighten($secondary, 7.5%);
+//     border-color: lighten($secondary, 7.5%);
+// }
+
+.btn-outline-secondary {
+    border-color: lighten($secondary, 7.5%);
+    color: lighten($secondary, 7.5%);
 }
 
 
 // Alerts
 @each $color, $value in $theme-colors {
     .alert-#{$color} {
-      @include alert-variant(theme-color-level($color, 0), theme-color-level($color, 0), theme-color-level($color, -10));
+      @include alert-variant(theme-color-level($color, -10), theme-color-level($color, -10), theme-color-level($color, 5));
     }
   }
 
 
+  @mixin table-row-variant($state, $background, $text) {
+    .table-#{$state} {
+      &,
+      > th,
+      > td {
+        background-color: $background;
+        color: $text;
+      }
+    }
+}
+
 // Tables
 @each $color, $value in $theme-colors {
-    @include table-row-variant($color, theme-color-level($color, 0));
+    @include table-row-variant($color, theme-color-level($color, -10), theme-color-level($color, 5));
   }
+
+
   
-  @include table-row-variant(active, $table-active-bg);
+  
 
 //Forms
 
@@ -84,7 +112,7 @@ GitHub: cristiansarca.github.io
 }
 
 .form-control-plaintext {
-    color: $light;
+    color: color-yiq($body-bg);
 }
 
 //Jumbotron
@@ -96,7 +124,21 @@ GitHub: cristiansarca.github.io
     border-radius: .3rem;
 }
 
+.card {
+    box-shadow: 0 .1rem .2rem rgba($black, .175);
+}
 
-  
+@each $color, $value in $theme-colors {
+    .badge-#{$color} {
+        color: $light;
+    }
+}
 
-  
+.badge-light {
+    color: $secondary;
+}
+
+.popover-header {
+    border-radius: .3rem;
+}
+

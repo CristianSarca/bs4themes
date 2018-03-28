@@ -10,7 +10,7 @@ GitHub: cristiansarca.github.io
 //NAVBAR
 
 .navbar {
-    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
     .form-control {
         background: $gray-200;
     }
@@ -63,6 +63,16 @@ GitHub: cristiansarca.github.io
     color: $secondary;
 }
 
+// .btn-secondary {
+//     background: lighten($secondary, 7.5%);
+//     border-color: lighten($secondary, 7.5%);
+// }
+
+.btn-outline-secondary {
+    border-color: lighten($secondary, 7.5%);
+    color: lighten($secondary, 7.5%);
+}
+
 
 // Alerts
 @each $color, $value in $theme-colors {
@@ -72,12 +82,25 @@ GitHub: cristiansarca.github.io
   }
 
 
+  @mixin table-row-variant($state, $background, $text) {
+    .table-#{$state} {
+      &,
+      > th,
+      > td {
+        background-color: $background;
+        color: $text;
+      }
+    }
+}
+
 // Tables
 @each $color, $value in $theme-colors {
-    @include table-row-variant($color, theme-color-level($color, -5));
+    @include table-row-variant($color, theme-color-level($color, -10), theme-color-level($color, 5));
   }
+
+
   
-  @include table-row-variant(active, $table-active-bg);
+  
 
 //Forms
 
@@ -88,7 +111,7 @@ GitHub: cristiansarca.github.io
 }
 
 .form-control-plaintext {
-    color: $light;
+    color: color-yiq($body-bg);
 }
 
 //Jumbotron
@@ -101,7 +124,7 @@ GitHub: cristiansarca.github.io
 }
 
 .card {
-    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.3);
+    box-shadow: 0 .1rem .2rem rgba($black, .175);
 }
 
 @each $color, $value in $theme-colors {
@@ -114,4 +137,7 @@ GitHub: cristiansarca.github.io
     color: $secondary;
 }
 
-  
+.popover-header {
+    border-radius: .3rem;
+}
+
